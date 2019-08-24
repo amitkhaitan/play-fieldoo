@@ -1,0 +1,9 @@
+.topheaderFixed{margin-top:75px;}
+.topheaderFixed{background-color:black; padding:8px 0;}
+.lb{color: white}
+.modal-header{
+    padding: 5px;
+    background: #5B9BD5;
+    color:white;
+    border-radius:5px;
+  }
