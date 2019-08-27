@@ -1,0 +1,234 @@
+<play-header></play-header>
+
+<!-- for getapp button on login screan
+<div *ngIf="browserName == 'ios' " class="topheaderFixed">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+        <label class="lb">App is not installed</label>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+        <button (click)="getApp()" class="btn btn-success pull-right">Get
+          App</button>
+      </div>
+    </div>
+  </div>
+</div>  -->
+<!-- for getapp button on login screan -->
+<!-- <div #template *ngIf="showTab">
+       
+  <div class="modal-header" >
+      <h4 class="modal-title pull-left">Demo</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="tapDiv ">
+          <div><img src="assets/images/add_home_icon.png" alt="Add to Home" /></div>
+          <p>
+            Install this webapp on your iPhone; tap &nbsp;<img src="assets/images/share_icon-2.png"
+              alt="Share Icon" />&nbsp; and then Add to Homescreen
+          </p>
+        </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+
+  </div>  -->
+
+  
+
+  <div class="help-section">
+        <div class="h1">
+          <div class="h1-line"></div>
+          <h1 class="h1-heading">HELP FOR <span class="h1-orange-text">PLAYERS</span></h1>
+        </div>
+        <div class="faq-container--2">
+      
+          <ng-container *ngFor="let playerHelp of (playersHelp$ | async)">
+            <div class="faq-wrap-2">
+              <div class="faq-question-2">
+                <div class="faq-plus-wrap-2">
+                  <div class="faq-plus-l"></div>
+                  <div class="faq-plus"></div>
+                </div>
+                <div class="faq-q-text-2">{{playerHelp[0]}}</div>
+              </div>
+              <div class="faq-answer-2">
+                <p class="faq-answer-text-2">{{playerHelp[1]}}</p>
+              </div>
+            </div>
+      
+          </ng-container>
+        </div>
+      
+        <div class="h1-1">
+          <div class="h1-line"></div>
+          <h1 class="h1-heading">HELP FOR <span class="h1-orange-text">AGENTS</span></h1>
+        </div>
+        <div class="faq-container--3">
+      
+          <ng-container *ngFor="let agentHelp of (agentsHelp$ | async)">
+            <div class="faq-wrap-2">
+              <div class="faq-question-2">
+                <div class="faq-plus-wrap-2">
+                  <div class="faq-plus-l"></div>
+                  <div class="faq-plus"></div>
+                </div>
+                <div class="faq-q-text-2">{{agentHelp[0]}}</div>
+              </div>
+              <div class="faq-answer-2">
+                <p class="faq-answer-text-2">{{agentHelp[1]}}</p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      
+        <div class="h1-1">
+          <div class="h1-line"></div>
+          <h1 class="h1-heading">VERIFIED <span class="h1-orange-text">ACCOUNTS</span></h1>
+        </div>
+        <div class="faq-container--4">
+      
+          <ng-container *ngFor="let verifiedAccount of (verifiedAccountsHelp$ | async)">
+            <div class="faq-wrap-2">
+              <div class="faq-question-2">
+                <div class="faq-plus-wrap-2">
+                  <div class="faq-plus-l"></div>
+                  <div class="faq-plus"></div>
+                </div>
+                <div class="faq-q-text-2">{{verifiedAccount[0]}}</div>
+              </div>
+              <div class="faq-answer-2">
+                <p class="faq-answer-text-2" [innerHTML]="verifiedAccount[1]"></p>
+              </div>
+            </div>
+      
+          </ng-container>
+         
+                
+        </div>
+        <div class="h1-1">
+          <div class="h1-line"></div>
+          <h1 class="h1-heading">PLAY GUIDELINES FOR PLAYERS - <span class="text-span-118">HOW TO CONTACT</span> AN AGENT</h1>
+        </div>
+        <p class="verified-paragraph">The key is to get contacted by an agent, scout or club and not to contact an agent!
+          Getting contacted or finding the right contact is not a simple task, as you must take a lot of factors in account.
+          It is hard work and it takes extra effort off pitch, but it is essential part of your career. Here are some
+          guidelines to find the best possible agent or industry contact.<br><br><span
+            class="text-span-73">a.</span><br><br>Your
+          Play profile is your football CV. When an agent or a scout ask you for your CV you send them your Play screen name
+          link www.play.com/yourscreenname.<br><br><span class="text-span-74">b.</span><br><br>Complete your football CV.
+          Agent won’t even look at empty or half completed profiles. You should always try to fully complete all aspects of
+          your Play profile. Don’t expect to get contacted if you don’t have a profile photo or you only entered two years of
+          football in your career history.<br><br><span class="text-span-75">c.</span><br><br>The most import part of your
+          football CV is your promotional video. If you don’t have one create one as immediately.<a
+            href="https://www.play.com/p/help#top"><br><br>‍</a><span class="text-span-76">d.</span><br><br>Always state your
+          right career information. Every good agent will double check your career data and all information on you. Don’t lie
+          or invent stuff.<a href="https://www.play.com/p/help#top"><br><br><span>‍</span></a><span
+            class="text-span-77">e.</span><br><br>Know what you are looking for. If you are an upcoming player with big
+          football dreams start by following and contacting an agent or agents from your region of activity. If you are
+          seeking your last professional contract you should also try contacting agents from football exotic countries.<a
+            href="https://www.play.com/p/help#top"><br><br><span>‍</span></a><span class="text-span-78">f.</span><br><br>All
+          agents, scouts and clubs assess players the same way.<br><br><span class="text-span-79">g.</span><br><br>Use Play
+          market classifieds and apply for posts. Apply only to classifieds you fit for. Don’t apply to post searching for EU
+          players if you are from Nigeria or Argentina. Just don’t do it!<br><br><span
+            class="text-span-80">h.<br></span><br>Never
+          pay any money upfront to unknown agents, scouts or persons asking for it. Be careful, as not everybody has good
+          intentions.<br><br><span class="text-span-81">i.</span><br><br>When contacting an agent stick to the facts, be
+          realistic and don&#x27;t make abnormal demands. If you are currently playing in the 4th English Premier
+          League.<br><br><span class="text-span-82">j.</span><br><br>Look around. There are thousands of agent, scouts, and
+          club representatives looking for football players on Play. Ask your Play network – friends and teammates for
+          recommendation.<br><br><span class="text-span-83">k.</span><br><br>Always do your own diligence. Play does verify
+          agent information, but cannot and doesn’t guarantee their intentions.<br><br><span
+            class="text-span-84">l.</span><br><br>Indemnify Play. You must agree not to hold us responsible for anything. We
+          are here to help, but all the decisions are you make on your own.<br><br><span
+            class="text-span-85">m.</span><br><br>When in doubt, contact us for advice.<br></p>
+        <div class="h1-1">
+          <div class="h1-line"></div>
+          <h1 class="h1-heading">PLAY GUIDELINES FOR PLAYERS - <span class="text-span-119">HOW TO MAKE</span> A PROMO VIDEO
+          </h1>
+        </div>
+        <p class="verified-paragraph">The football player&#x27;s promo video is one of the most important or even decisive
+          things that make first impression on agents and scouts. That is why a player should have a quality promo video based
+          on the qualities which agents and scouts like to see. Here are some guidelines on how to make the the best possible
+          promo video to show your talent to the world. Promotional video is the most important part of your football CV. It
+          is a short clip, made from various games (matches), where a player presents himself and emphasize his
+          attributes.<br><br><span class="text-span-86">a.</span><br><br>The promo video must point out the best attributes
+          according to the player&#x27;s position on the field, not just the best moves. <br><br>Learn on examples for:
+          DEFENSIVE MIDFIELDER: defensive play, tackling, positioning, reading the game, changing the sides of the play, short
+          passes, long passes, long range shooting, set pieces, etc.; <br><br>GOALKEEPER: command of area, best saves, one on
+          one situations, reaction to high balls, good technic, long balls shooting, long ball throwing, etc.;
+          <br><br>STRIKER:
+          goals from all positions, with both legs, with head, defensive working habits, ability to keep the ball, one on one
+          situation, set pieces, etc.<br><br><span class="text-span-87">b.<br></span><br>The promo video has to be short.
+          Ideally it should be from three (3) to maximum ten (10) minutes long.<br><br><span
+            class="text-span-88">c.</span><br><br>If possible, the promo video should contain the footage from the competitive
+          matches only. Agents and scouts need to see player&#x27;s reactions in real situations when there is lack of time
+          and space and also reactions under pressure.<br><br><span class="text-span-89">d.</span><br><br>NEVER MAKE the promo
+          video that contains juggling, free styling, free kicks taking only, futsal playing or playing for fun with
+          friends.<br><br><span class="text-span-90">e.</span><br><br>A promo video must contain player&#x27;s basic info. Add
+          an ID to your presentation, stating who you are: your name and surname, date of birth, position, club (former
+          clubs), nationality, height/weight and any other relevant information that might interest your viewer.<br><br><span
+            class="text-span-91">f.</span><br><br>Make sure that it is clearly visible who you are on the video.
+          Post-production custom effects (for instance: highlighting your pitch position by a circle or a pointer,..) take
+          some time, but are well worth it.<br><br><span class="text-span-92">g.</span><br><br>The footage has to be the
+          highest quality possible.<br><br><span class="text-span-96">h.</span><br><br>Promo video should not be older than 1
+          year, and should be regularly updated. If possible, update promo video all the time (at least once a year, that
+          is).<br><br><span class="text-span-97">i.</span><br><br>Use only material that is relevant and up-to-date. Avoid
+          using old footage;
+          not only because a skilled agent or scout will know that the material is old, but also because – if everything is
+          normal – newer footage should show better and new skills.<br><br><span class="text-span-98">j.</span><br><br>Make
+          sure you have enough material (your football matches) to make a good compilation out of it. If your games are not on
+          TV and nobody is filming them, it is up to you to get somebody who will catch you on tape. In today’s digitalized
+          world, it shouldn’t be a problem.<br><br><span class="text-span-95">k.</span><br><br>Get to recordings of your
+          matches or make sure (together with your team-mates) your matches are getting recorded. <br><br>ASK YOUR COACH. If
+          you’re using videos to analyse your performance after the game then you can surely get a copy directly from your
+          club. <br><br>GET IT DIRECTLY FROM A BROADCAST. If your matches are broadcasted live on TV, you can ask the TV
+          station to give you a copy or have someone record the broadcast. <br><br>HIRE A CAMERAMAN or ask a friend. If above
+          options aren’t possible than you can hire a cameraman. Talk to your teammates so you’ll be able to share expenses
+          and get copies for everyone. If all of you pitch in you could even get a camera crew and end up with a professional
+          recordings with multiple angles.<br><br><span class="text-span-94">l.</span><br><br>Whatever problem you encounter,
+          there is always a solution:<br><br>Don&#x27;t have the footage from a competitive match? Use the footage from the
+          friendly match.<br>Don&#x27;t have a high quality camera? Use a smart phone.<br>Don&#x27;t know how to cut the
+          video? Use the YouTube Video Editor.<br><br><span class="text-span-93">m.</span><br><br>When in doubt, contact us
+          for advice. We are here to help, but all the decisions are you make on your own.<br></p>
+        <div class="h1-1">
+          <div class="h1-line"></div>
+          <h1 class="h1-heading">PLAY GUIDELINES FOR <span class="h1-orange-text">AGENTS</span></h1>
+        </div>
+        <p class="verified-paragraph">The key is to gain experience and further your career. Play adds another dimension to
+          your hard work as an agent, it gives you an online presence and opportunity to find new players and expand your
+          network. Getting hired or making partnerships is built on trust and transparency so make sure you have this mind
+          when working of Play. Here are a few guidelines to help you make your Play experience better for
+          everyone.<br><br>‍<span class="text-span-99">a.</span><br><br>Your Play profile is your business CV. When a club
+          representative, a colleague or even a player ask you for your CV you send them your Play screen name link
+          www.play.com/yourscreenname.<br><br><span class="text-span-100">b.</span><br><br>Complete your profile. It&#x27;s
+          impossible to trust people you know nothing about so make sure players and other agents have your information on
+          display. <br><br>Don’t expect to get contacted if you don’t have a profile photo or haven&#x27;t written anything
+          about yourself.<br><br><span class="text-span-101">c.</span><br><br>Always state your right career information.
+          Every player, club representative and fellow agent will double check your career data and information on you before
+          considering doing business with you. So will us. Don’t lie or invent stuff.<br><br><span
+            class="text-span-102">d.</span><br><br>Know what you are looking for and what you offer. Fill in regions of
+          activity you are or will be active in and be specific in your market posts.<br><br><span
+            class="text-span-103">e.</span><br><br>Use Play Market and post offers and apply for posts. Apply only to
+          classifieds you fit for. Don’t apply if a post is looking for a partnership in Brazil and you work in
+          Sweden.<br><br><span class="text-span-104">f.</span><br><br>When contacting players and other agents stick to the
+          facts, be realistic and don&#x27;t make abnormal demands.<br><br><span class="text-span-105">g.</span><br><br>Look
+          around. There are tens of thousands of players looking for new opportunities and thousands of others working in
+          football on Play. Ask your Play network – friends and colleagues for recommendation.<br><br><span
+            class="text-span-106">h.</span><br><br>Always do your own diligence. Play checks players&#x27; info and verifies
+          agent information, but cannot and doesn’t guarantee their intentions.<br><br><span
+            class="text-span-107">i.</span><br><br>Indemnify Play. You must agree not to hold us responsible for anything. We
+          are here to help, but all the decisions you make on your own.<br><br><span
+            class="text-span-108">j.</span><br><br>When
+          in doubt, contact us for advice<br></p>
+      </div>
+      <play-footer></play-footer>
+     
+      
+    
+      <router-outlet></router-outlet>
+
+      
