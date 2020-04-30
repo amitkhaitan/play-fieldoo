@@ -29,7 +29,7 @@
     "@ngrx/router-store": "^8.2.0",
     "@ngrx/store": "^8.2.0",
     "@ngrx/store-devtools": "^8.2.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngrx-store-freeze": "^0.2.4",
     "ngx-bootstrap": "^5.1.1",
     "bootstrap": "^4.1.3",
